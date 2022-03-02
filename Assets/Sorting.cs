@@ -10,11 +10,12 @@ public class Sorting : MonoBehaviour
         WriteArray(array);
         Debug.Log("-----------Sorting-----------");
 
-        float startTime = Time.realtimeSinceStartup;
+        float time = Time.realtimeSinceStartup;
         //BubbleSort(array);
         ChoiceSort(array);
+        time = Time.realtimeSinceStartup - time;
         WriteArray(array);
-        Debug.Log($"Sorting time is {(Time.realtimeSinceStartup - startTime).ToString("F8")} seconds");
+        Debug.Log($"Sorting time is {time.ToString("F8")} seconds");
     }
 
     private int[] SetArray(int length)
